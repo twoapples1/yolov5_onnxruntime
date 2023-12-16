@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GB2312"?>
+<opencv_storage>
+	<OrtSeting>
+		<UseDeviceId>0</UseDeviceId><!--所使用的设备索引-->
+		<UseMIGraphX>0</UseMIGraphX><!--是否采用MIGraphX进行推理-->
+		<GraphOptimizationLevel>99</GraphOptimizationLevel><!--图优化等级-->
+		<LogSeverityLevel>3</LogSeverityLevel><!--日志输出等级-->
+		<EnableProfiling>0</EnableProfiling><!--Profiling-->
+	</OrtSeting>
+	<!--YOLOV5检测器 -->
+	<DetectorYOLOV5>
+		<ModelPath>"../resource/models/yolov5s_Nx3xNxN.onnx"</ModelPath>
+		<ClassNameFile>"../resource/models/coco.names"</ClassNameFile>
+		<UseFP16>0</UseFP16><!--是否使用FP16-->
+		<NumberOfClasses>80</NumberOfClasses><!--类别数(不包括背景类)，COCO:80,VOC:20-->
+		<ConfidenceThreshold>0.3</ConfidenceThreshold>
+		<NMSThreshold>0.5</NMSThreshold>
+		<ObjectThreshold>0.5</ObjectThreshold>
+		<IOUThreshold>0.4</IOUThreshold>
+	</DetectorYOLOV5>
+
+</opencv_storage>
