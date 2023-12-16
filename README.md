@@ -1,25 +1,17 @@
 # YoloV5
 
-## 论文
+## Model Structure
 
-无
-
-## 模型结构
-
-YoloV5是一种单阶段目标检测算法，该算法在YOLOV4的基础上添加了一些新的改进思路，使其速度与精度都得到了极大的性能提升。
+YOLOv5 is a model based on a single-stage object detector, which adopts CSPNet and SPPNet structures and achieves the latest performance in classification and detection tasks. YOLOv5 divides the input image into grids of different sizes and predicts the categories and bounding boxes of all objects present in each grid. This model has fast inference speed and high accuracy, and is suitable for various computer vision tasks such as real-time object detection and face detection.
 
 <img src=./doc/YOLOV5_01.jpg style="zoom:100%;" align=middle>
 
-## 算法原理
+## Environmental Configuration
 
-YOLOv5算法通过将图像划分为不同大小的网格，预测每个网格中的目标类别和边界框，利用特征金字塔结构和自适应的模型缩放来实现高效准确的实时目标检测。
-
-## 环境安装
-
-step1:安装opencv
+step1:Install opencv
 
 ```bash
-#安装opencv4.6
+#instal opencv4.6
 wget https://github.com/opencv/opencv/archive/refs/tags/4.6.0.tar.gz
 cd opencv
 mkdir build
@@ -29,7 +21,7 @@ make
 make install
 ```
 
-step2:克隆项目并修改本地ORT所在目录并编译
+step2:Clone the project and modify the directory where the local ORT is located and compile it
 
 ```bash
 git clone xxx.git
@@ -39,7 +31,7 @@ make
 ./YOLOV5
 ```
 
-## 效果图展示
+## Renderings
 
 ### FP32
 
@@ -47,17 +39,8 @@ make
   <img src="./resource/images/result.jpg" alt="Image" style="width:500px;">
 </div>
 
-## 应用场景
 
-### 算法类别
+## Reference
 
-`目标检测`
-
-### 热点应用行业
-
-`交通`,`教育`,`化工`
-
-## 参考资料
-
-https://github.com/ultralytics/yolov5
+https://github.com/ultralytics/yolov5     
 https://github.com/itsnine/yolov5-onnxruntime
