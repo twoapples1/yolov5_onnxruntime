@@ -24,7 +24,8 @@ make install
 step2:Clone the project and modify the directory where the local ORT is located and compile it
 
 ```bash
-git clone xxx.git
+source /opt/dtk/env.sh
+cd yolov5_onnxruntime
 mkdir build && cd build
 cmake ..
 make
