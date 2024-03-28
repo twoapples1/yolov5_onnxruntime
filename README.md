@@ -25,7 +25,7 @@ step2:Clone the project and modify the directory where the local ORT is located 
 
 ```bash
 git clone xxx.git
-mkdir build
+mkdir build && cd build
 cmake ..
 make
 ./YOLOV5
