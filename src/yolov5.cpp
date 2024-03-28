@@ -90,7 +90,7 @@ ErrorCode DetectorYOLOV5::Initialize(InitializationParameterOfDetector initializ
     else if(rocmAvailable != availableProviders.end())
     {
         //使用 ROCM 端进行推理
-        LOG_INFO(stdout,"Inference device: AMD GPU.\n");
+        LOG_INFO(stdout,"Inference device: DCU .\n");
         OrtROCMProviderOptions rocmOptions;
         rocmOptions.device_id = DeviceId;
         sessionOptions.AppendExecutionProvider_ROCM(rocmOptions);
