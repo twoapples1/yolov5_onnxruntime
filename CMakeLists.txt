@@ -4,9 +4,7 @@ cmake_minimum_required(VERSION 3.5)
 option(ONNXRUNTIME_DIR "Path to built ONNX Runtime directory." STRING)
 message(STATUS "ONNXRUNTIME_DIR: ${ONNXRUNTIME_DIR}")
 
-set(ONNXRUNTIME_DIR "/FrameWork/soft/onnxruntime-linux-x64-gpu-1.14.0")
-
-#${ONNXRUNTIME_DIR} /FrameWork/soft/onnxruntime-linux-x64-gpu-1.14.0/
+set(ONNXRUNTIME_DIR "/opt/dtk/onnxruntime/")
 # 设置项目名
 project(YOLOV5)
 
@@ -19,12 +17,14 @@ set(CMAKE_BUILD_TYPE release)
 set(INCLUDE_PATH    ${CMAKE_CURRENT_SOURCE_DIR}/include/
                     ${CMAKE_CURRENT_SOURCE_DIR}/src/Utility/ 
                     ${ONNXRUNTIME_DIR}/include/
+                    ${ROCM_PATH/include/}
                     /usr/local/include/opencv4/)
 include_directories(${INCLUDE_PATH})
 
 # 添加依赖库路径
 set(LIBRARY_PATH ${ONNXRUNTIME_DIR}/lib/
-                 /usr/local/lib64/)
+                 /usr/local/lib64/ 
+                 ${ROCM_PATH}/lib/)
 link_directories(${LIBRARY_PATH})
 
 # 添加依赖库
